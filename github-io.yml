@@ -1,8 +1,5 @@
-# ~/.tmuxinator/mugijiru.github.io.yml
-
-name: mugijiru.github.io
+name: github-io
 root: ~/projects/private/mugijiru.github.com
-
 
 windows:
   - logs:
