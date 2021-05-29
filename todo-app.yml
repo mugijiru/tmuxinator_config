@@ -1,0 +1,16 @@
+# ~/.tmuxinator/todo-app.yml
+
+name: todo-app
+root: ~/projects/private/ember-rails-todo-app/
+
+
+windows:
+  - logs:
+      layout: tiled
+      panes:
+        - docker-compose up
+  - editor:
+      layout: tiled
+      panes:
+        - docker-compose run rails rails c
+        - git status
