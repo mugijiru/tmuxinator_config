@@ -1,0 +1,26 @@
+name: stock-places
+root: ~/projects/private/stock-places/
+
+pre_window: rbenv shell 2.6.5
+
+startup_window: main
+
+windows:
+  - logs:
+      layout: tiled
+      panes:
+        - tail -f log/development.log
+  - servers:
+      layout: tiled
+      panes:
+        - ./bin/bundle exec rails server -b 0.0.0.0 -p 3000
+        - ./bin/webpack-dev-server
+  - consoles:
+      layout: tiled
+      panes:
+        - psql stock_places_development
+        - ./bin/bundle exec spring rails console
+  - main:
+      layout: tiled
+      panes:
+        - git st
