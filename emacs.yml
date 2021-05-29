@@ -1,0 +1,10 @@
+name: emacs
+root: ~/.emacs.d/
+
+startup_window: main
+
+windows:
+  - main:
+      layout: tiled
+      panes:
+        - git st
