@@ -1,0 +1,12 @@
+# ~/.tmuxinator/mugijiru.github.io.yml
+
+name: mugijiru.github.io
+root: ~/projects/private/mugijiru.github.com
+
+
+windows:
+  - logs:
+      layout: tiled
+      panes:
+        - hugo server -D
+        - ls
