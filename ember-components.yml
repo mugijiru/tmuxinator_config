@@ -1,0 +1,12 @@
+name: ember-components
+root: ~/projects/private/ember-components/
+
+windows:
+  - logs:
+      layout: tiled
+      panes:
+        - docker-compose up
+  - editor:
+      layout: tiled
+      panes:
+        - git status
