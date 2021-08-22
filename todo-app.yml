@@ -3,14 +3,17 @@
 name: todo-app
 root: ~/projects/private/ember-rails-todo-app/
 
-
 windows:
-  - logs:
+  - servers:
       layout: tiled
       panes:
-        - docker-compose up
+        - docker-compose -f docker-compose.dev.yml up --remove-orphans mysql
+        - docker-compose -f docker-compose.dev.yml up --remove-orphans rails
+        - docker-compose -f docker-compose.dev.yml up --remove-orphans swagger-ui
+        - docker-compose -f docker-compose.dev.yml up --remove-orphans webdriver_chrome
+
   - editor:
       layout: tiled
       panes:
-        - docker-compose run rails rails c
+        - docker-compose -f docker-compose.dev.yml run rails bin/rails console
         - git status
