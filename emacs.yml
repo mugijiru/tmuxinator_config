@@ -8,3 +8,5 @@ windows:
       layout: tiled
       panes:
         - git st
+        - cd hugo && hugo server -D
+        - cat /tmp/emacs-outdated-packages.txt
