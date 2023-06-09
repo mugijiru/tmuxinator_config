@@ -8,3 +8,4 @@ windows:
       layout: tiled
       panes:
         - git st
+        - cat /tmp/emacs-outdated-packages.txt
